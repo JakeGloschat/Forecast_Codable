@@ -18,6 +18,8 @@ class DayDetailsViewController: UIViewController {
     @IBOutlet weak var currentDescriptionLabel: UILabel!
     
     //MARK: - Properties
+    var days: [Day] = []
+    var forecastData: TopLevelDictionary?
     
     
     //MARK: - View Lifecyle
@@ -25,23 +27,45 @@ class DayDetailsViewController: UIViewController {
         super.viewDidLoad()
         dayForcastTableView.dataSource = self
         dayForcastTableView.delegate   = self
+        
+        fetchWeather()
     }
     
     
+    func fetchWeather() {
+        NetworkController.fetchDays { forecastData in
+            guard let forecastData = forecastData else { return }
+            self.forecastData = forecastData
+            self.days = forecastData.days
+            DispatchQueue.main.async {
+                self.cityNameLabel.text = forecastData.cityName
+                self.updateViews()
+                self.dayForcastTableView.reloadData()
+            }
+        }
+    }
+    
     //MARK: - FUNCTIONS
     func updateViews() {
-    
+        let today = days[0]
+        currentTempLabel.text = "\(today.temp)°F"
+        currentHighLabel.text = "\(today.highTemp)°F"
+        currentLowLabel.text  = "\(today.lowTemp)°F"
+        currentDescriptionLabel.text = today.weather.description
     }
 }
 
 //MARK: - Extenstions
 extension DayDetailsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 44
+        return days.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "dayCell", for: indexPath) as? DayForcastTableViewCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "dayCell", for: indexPath) as? DayForcastTableViewCell else { return UITableViewCell() }
+        
+        let day = days[indexPath.row]
+        cell.updateViews(day: day)
         
         return cell
     }
