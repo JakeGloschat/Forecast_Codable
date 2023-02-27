@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2936A48E29AD5541001A1452 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2936A48D29AD5541001A1452 /* Day.swift */; };
+		2936A49129AD579F001A1452 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2936A49029AD579F001A1452 /* NetworkController.swift */; };
+		2936A49429AD5819001A1452 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2936A49329AD5819001A1452 /* Constants.swift */; };
 		413CA70727B0DA1C00461FE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413CA70627B0DA1C00461FE3 /* AppDelegate.swift */; };
 		413CA70927B0DA1C00461FE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413CA70827B0DA1C00461FE3 /* SceneDelegate.swift */; };
 		413CA70E27B0DA1C00461FE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413CA70C27B0DA1C00461FE3 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		2936A48D29AD5541001A1452 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		2936A49029AD579F001A1452 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		2936A49329AD5819001A1452 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		413CA70327B0DA1C00461FE3 /* Forecast_Codable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forecast_Codable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		413CA70627B0DA1C00461FE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		413CA70827B0DA1C00461FE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		2936A48F29AD5783001A1452 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2936A49029AD579F001A1452 /* NetworkController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		2936A49229AD5808001A1452 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				413CA70C27B0DA1C00461FE3 /* Main.storyboard */,
+				413CA71127B0DA1F00461FE3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		413CA6FA27B0DA1C00461FE3 = {
 			isa = PBXGroup;
 			children = (
@@ -69,10 +90,10 @@
 			isa = PBXGroup;
 			children = (
 				2936A48C29AD5539001A1452 /* Model */,
+				2936A48F29AD5783001A1452 /* Model Controller */,
 				413CA71E27B0DBDB00461FE3 /* View */,
 				413CA71A27B0DA5600461FE3 /* Supporting Files */,
-				413CA70C27B0DA1C00461FE3 /* Main.storyboard */,
-				413CA71127B0DA1F00461FE3 /* LaunchScreen.storyboard */,
+				2936A49229AD5808001A1452 /* Storyboard */,
 			);
 			path = Forecast_Codable;
 			sourceTree = "<group>";
@@ -84,6 +105,7 @@
 				413CA70827B0DA1C00461FE3 /* SceneDelegate.swift */,
 				413CA70F27B0DA1F00461FE3 /* Assets.xcassets */,
 				413CA71427B0DA1F00461FE3 /* Info.plist */,
+				2936A49329AD5819001A1452 /* Constants.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -170,7 +192,9 @@
 			files = (
 				413CA70727B0DA1C00461FE3 /* AppDelegate.swift in Sources */,
 				413CA72327B0DC4300461FE3 /* DayDetailsViewController.swift in Sources */,
+				2936A49129AD579F001A1452 /* NetworkController.swift in Sources */,
 				413CA70927B0DA1C00461FE3 /* SceneDelegate.swift in Sources */,
+				2936A49429AD5819001A1452 /* Constants.swift in Sources */,
 				2936A48E29AD5541001A1452 /* Day.swift in Sources */,
 				413CA72527B0DC7E00461FE3 /* DayForcastTableViewCell.swift in Sources */,
 			);
