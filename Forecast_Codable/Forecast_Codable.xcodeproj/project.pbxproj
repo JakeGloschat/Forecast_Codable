@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2936A48E29AD5541001A1452 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2936A48D29AD5541001A1452 /* Day.swift */; };
 		413CA70727B0DA1C00461FE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413CA70627B0DA1C00461FE3 /* AppDelegate.swift */; };
 		413CA70927B0DA1C00461FE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413CA70827B0DA1C00461FE3 /* SceneDelegate.swift */; };
 		413CA70E27B0DA1C00461FE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413CA70C27B0DA1C00461FE3 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2936A48D29AD5541001A1452 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		413CA70327B0DA1C00461FE3 /* Forecast_Codable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forecast_Codable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		413CA70627B0DA1C00461FE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		413CA70827B0DA1C00461FE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2936A48C29AD5539001A1452 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2936A48D29AD5541001A1452 /* Day.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		413CA6FA27B0DA1C00461FE3 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 		413CA70527B0DA1C00461FE3 /* Forecast_Codable */ = {
 			isa = PBXGroup;
 			children = (
+				2936A48C29AD5539001A1452 /* Model */,
 				413CA71E27B0DBDB00461FE3 /* View */,
 				413CA71A27B0DA5600461FE3 /* Supporting Files */,
 				413CA70C27B0DA1C00461FE3 /* Main.storyboard */,
@@ -160,6 +171,7 @@
 				413CA70727B0DA1C00461FE3 /* AppDelegate.swift in Sources */,
 				413CA72327B0DC4300461FE3 /* DayDetailsViewController.swift in Sources */,
 				413CA70927B0DA1C00461FE3 /* SceneDelegate.swift in Sources */,
+				2936A48E29AD5541001A1452 /* Day.swift in Sources */,
 				413CA72527B0DC7E00461FE3 /* DayForcastTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

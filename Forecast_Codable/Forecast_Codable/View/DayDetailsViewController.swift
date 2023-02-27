@@ -19,11 +19,16 @@ class DayDetailsViewController: UIViewController {
     
     //MARK: - Properties
     
+    
     //MARK: - View Lifecyle
     override func viewDidLoad() {
         super.viewDidLoad()
+        dayForcastTableView.dataSource = self
+        dayForcastTableView.delegate   = self
     }
     
+    
+    //MARK: - FUNCTIONS
     func updateViews() {
     
     }
@@ -36,7 +41,7 @@ extension DayDetailsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "dayC3ll", for: indexPath) as? DayForcastTableViewCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "dayCell", for: indexPath) as? DayForcastTableViewCell else {return UITableViewCell()}
         
         return cell
     }
